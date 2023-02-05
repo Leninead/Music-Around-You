@@ -1,9 +1,21 @@
-.logo-picture{
- width: 110px;
- height: 90px;
- border-radius: 60px;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+ul {
+  list-style: none;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
 .Navbar-logo{
   display: flex;
   justify-content: baseline;
@@ -21,6 +33,8 @@ h1 {
   font-size: 15px;
   color: rgba(34, 4, 63, 0.726);
   font-family: 'Michroma', sans-serif;
+  padding-inline-start: 15px;
+  
   
   
 
@@ -33,14 +47,30 @@ h1 {
   margin: 15px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-.category {
+.NavBar {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
+ 
    align-items: center;
 }
+.products-list{
+  display: flex;
 
-li { gap: 10px;
+  justify-content: space-around;
+  color: rgba(34, 4, 63, 0.726);
+ 
+}
 
+a {
+  color: rgba(34, 4, 63, 0.726);
+   padding-inline-start: 15px;
+}
+
+a:hover {
+  background-color:  rgba(34, 4, 63, 0.726);
+  color: white;
+  border-radius: 10px;
 }
 
 .cart-div {
@@ -48,8 +78,14 @@ display: flex;
 justify-content: baseline;
 align-items: center;
 
-
 }
+
+.cart-numerito{
+  color: rgba(34, 4, 63, 0.726);
+  font-weight: 700;
+  font-size: 20px;
+}
+
 .material-symbols-outlined{
   font-size: 25px;
 }

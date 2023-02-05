@@ -1,6 +1,10 @@
 import React from 'react'
 import CartWidget from './CartWidget';
 import logo from "../assets/face-logo.jpg";
+import { Avatar} from '@chakra-ui/react'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 
 
@@ -10,20 +14,33 @@ const NavBar = () => {
     <>
       <div className="NavBar-container">
 
-      <div className='Navbar-logo'>
-      <img className='logo-picture' src={logo} />
-        <h1>Music Around You</h1>
-      </div>
+       <div className='Navbar-logo'>
+       <Avatar  size='lg' className='avatar' src={logo}/>
+         <h1>Music Around You</h1>
+       </div>
       
 
-        <ul className="category">
+      <Navbar className='NavBar'>
+        <Container>
+          
+          <Nav className='products-list'>
+          
+ 
+          <a href="#Guitarras"> <li >Guitarras</li> </a>
+           <a href="#Bajos"> <li >Bajos</li> </a>
+           <a href="#Percusion"> <li >Percusion</li> </a>
+           <a href="#Contactos"> <li >Contactos</li> </a>
+          </Nav>
+        </Container>
+      </Navbar>
+      
+  
+  
+    
 
-            <li>Product1</li>
-            <li>Product2</li>
-            <li>Product3</li>
-            <li>Product4 </li>
-            
-        </ul>
+
+
+
         <CartWidget />
     
         
