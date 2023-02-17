@@ -1,15 +1,36 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemListContainer from "./components/ItemListContainer"
 import NavBar from "./components/NavBar"
+import Welcome from "./components/Welcome"
+import Cart from "./components/Cart";
 
 
 
-const App = () => {
-  return (
-    <>
-      <NavBar />
-      <ItemListContainer
-      greeting="Te invitamos a vivir una experiencia musical!" />
-    </>
-  )
-}
-export default App
+  const App = () => {
+    return (
+      <BrowserRouter>
+       <NavBar />
+
+      
+        <Routes>
+
+        <Route exact path="/Welcome" element= {< Welcome greeting="Te invitamos a vivir una experiencia musical!" />} />;
+
+        <Route exact path="/Products" element=    {<ItemListContainer />} />;
+
+        <Route exact path="/cart" element= {<Cart />} />;
+
+        
+     
+   
+     
+
+        </Routes>
+
+      </BrowserRouter>
+    );
+ }
+  export default App;
+
+
+

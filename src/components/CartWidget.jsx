@@ -3,7 +3,7 @@ import React from 'react'
 
 const CartWidget = () => {
   return (
-    <div className = "cart-div">
+    <div>
      
      <a href='cart-enlace'><span className="material-symbols-outlined" >
         shopping_cart

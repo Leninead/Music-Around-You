@@ -5,6 +5,7 @@ import { Avatar} from '@chakra-ui/react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
 
 
@@ -15,8 +16,15 @@ const NavBar = () => {
       <div className="NavBar-container">
 
        <div className='Navbar-logo'>
-       <Avatar  size='lg' className='avatar' src={logo}/>
-         <h1>Music Around You</h1>
+    <Link  to= "/Welcome">
+    <Avatar  size='lg' className='avatar' src={logo}/>
+       
+    </Link>
+      
+    <Link  to= "/Welcome"> 
+    <h1>Music Around You</h1></Link>
+ 
+    
        </div>
       
 
@@ -26,22 +34,22 @@ const NavBar = () => {
           <Nav className='products-list'>
           
  
-          <a href="#Guitarras"> <li >Guitarras</li> </a>
-           <a href="#Bajos"> <li >Bajos</li> </a>
-           <a href="#Percusion"> <li >Percusion</li> </a>
-           <a href="#Contactos"> <li >Contactos</li> </a>
+          <a className='products' href="#Guitarras"> <li >Guitarras</li> </a>
+           <a className='products' href="#Bajos"> <li >Bajos</li> </a>
+           <a className='products' href="#Percusion"> <li >Percusion</li> </a>
+           <a className='products' href="#Contactos"> <li >Contactos</li> </a>
+           
           </Nav>
         </Container>
       </Navbar>
       
-  
-  
-    
-
-
-
-
-        <CartWidget />
+        
+          <Link  className = "cart-div" to= "/cart">
+          <CartWidget />
+          </Link>
+       
+          
+   
     
         
         

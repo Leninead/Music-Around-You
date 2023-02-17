@@ -1,17 +1,17 @@
-import React from 'react'
-import banner from "../assets/banner.jpg"
+// import ItemList from "./ItemList";
 
-const ItemListContainer = ({greeting}) => {
+// import data from "./data.json"
+
+const ItemListContainer = () => {
   return (
-    <div className='greeting-welcome'>{greeting}
-    
-    
-    <img className='banner-picture' src={banner}/>
+    <div></div>
 
-    </div>
-     
 
-  )
+ 
+
+
+
+  );
 }
 
 export default ItemListContainer

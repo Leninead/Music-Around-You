@@ -35,15 +35,14 @@ h1 {
   font-family: 'Michroma', sans-serif;
   padding-inline-start: 15px;
   
-  
-  
-
 }
+
 
 
 .NavBar-container{
   display: flex;
   justify-content: space-around;
+  justify-content: baseline;
   margin: 15px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
@@ -62,12 +61,12 @@ h1 {
  
 }
 
-a {
+.products{
   color: rgba(34, 4, 63, 0.726);
    padding-inline-start: 15px;
 }
 
-a:hover {
+a.products:hover {
   background-color:  rgba(34, 4, 63, 0.726);
   color: white;
   border-radius: 10px;
@@ -76,6 +75,7 @@ a:hover {
 .cart-div {
 display: flex;
 justify-content: baseline;
+
 align-items: center;
 
 }
