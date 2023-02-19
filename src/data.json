@@ -62,7 +62,7 @@
     "img": "../assets/percusion/bateria-pearl.jpg", 
     "description": "Bateria Pearl Vision Birch 12/13/16/22 De 4 Cpos Vsx925/c431",
     "stock": 2,
-    "category": "Percusión"
+    "category": "Percusion"
   },
   {
     "id": 8, 
@@ -71,7 +71,7 @@
     "img": "../assets/percusion/bateria-yamaha.jpg", 
     "description": "Batería Yamaha Sbp0f5cr Stage Custom Birch Caja Cerrada",
     "stock": 3,
-    "category": "Percusión"
+    "category": "Percusion"
   },
   {
     "id": 9, 
@@ -80,6 +80,6 @@
     "img": "../assets/percusion/conga.jpg", 
     "description": "Conga Parquer Liviana Negra Fibra Vidrio Parche Cuero 10",
     "stock": 5,
-    "category": "Percusión"
+    "category": "Percusion"
   }
   ]

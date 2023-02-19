@@ -48,28 +48,12 @@ h1 {
 }
 .NavBar {
   display: flex;
-  flex-direction: column;
+
   justify-content: space-around;
- 
+
    align-items: center;
-}
-.products-list{
-  display: flex;
 
-  justify-content: space-around;
-  color: rgba(34, 4, 63, 0.726);
- 
-}
 
-.products{
-  color: rgba(34, 4, 63, 0.726);
-   padding-inline-start: 15px;
-}
-
-a.products:hover {
-  background-color:  rgba(34, 4, 63, 0.726);
-  color: white;
-  border-radius: 10px;
 }
 
 .cart-div {
