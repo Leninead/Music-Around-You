@@ -2,7 +2,7 @@
     { "id": 1, 
     "name": "Guitarra eléctrica Epiphone", 
     "price": 397.921, 
-    "img": "../assets/guitars/epiphone.jpg",
+    "img": "./src/assets/guitars/epiphone.jpg",
     "description": "Guitarra eléctrica Epiphone Inspired by Gibson Les Paul Standard 50s de caoba heritage cherry sunburst brillante con diapasón de laurel indio",
     "stock": 2,
     "category": "Guitarras"
@@ -12,7 +12,7 @@
     { "id": 2, 
     "name": "Guitarra eléctrica Fender Telecaster HH ", 
     "price": 484.508, 
-    "img": "../assets/guitars/fender-telecaster",
+    "img": "./src/assets/guitars/fender-telecaster.jpg",
     "description": "Guitarra eléctrica Fender Player Telecaster HH de aliso 3-color sunburst brillante con diapasón de granadillo brasileño",
     "stock": 4,
     "category": "Guitarras"
@@ -22,7 +22,7 @@
     { "id": 3, 
     "name": "Guitarra eléctrica Ibanez RG ", 
     "price": 141.708, 
-    "img": "../assets/guitars/ibanez.jpg",
+    "img": "./src/assets/guitars/ibanez.jpg",
     "description": "Guitarra eléctrica Ibanez RG GIO GRG150DX de álamo black con diapasón de palo de rosa",
     "stock": 5,
     "category": "Guitarras"
@@ -32,7 +32,7 @@
     "id": 4, 
     "name": "Bajo Fender Road Worn Flea", 
     "price": 958.886, 
-    "img": "../assets/basses/bajo-fender-road.jpg",
+    "img": "./src/assets/basses/bajo-fender-road.jpg",
     "description": "Bajo Fender Road Worn Flea Jazz Bass Shell Pink 014-1020-356",
     "stock": 2,
     "category": "Bajos"
@@ -41,7 +41,7 @@
     "id": 5, 
     "name": "Bajo Fender Jazz Bass", 
     "price": 519.750, 
-    "img": "../assets/basses/jazz-bass.jpg",
+    "img": "./src/assets/basses/jazz-bass.jpg",
     "description": "Bajo Fender Jazz Bass Standard Negro Rosewood 014-6200-506",
     "stock": 6,
     "category": "Bajos"
@@ -50,7 +50,7 @@
     "id": 6, 
     "name": "Bajo Act Fender Deluxe", 
     "price": 685.241,
-    "img": "../assets/basses/fender-deluxe.jpg", 
+    "img": "./src/assets/basses/fender-deluxe.jpg", 
     "description": "Bajo Act Fender Deluxe Dimension Bass V Natural 014-3812-321",
     "stock": 4,
     "category": "Bajos"
@@ -59,7 +59,7 @@
     "id": 7, 
     "name": "Bateria Pearl Vision Birch", 
     "price": 340.000, 
-    "img": "../assets/percusion/bateria-pearl.jpg", 
+    "img": "./src/assets/percusion/bateria-pearl.jpg", 
     "description": "Bateria Pearl Vision Birch 12/13/16/22 De 4 Cpos Vsx925/c431",
     "stock": 2,
     "category": "Percusion"
@@ -68,7 +68,7 @@
     "id": 8, 
     "name": "Batería Yamaha Stage", 
     "price": 450.000, 
-    "img": "../assets/percusion/bateria-yamaha.jpg", 
+    "img": "./src/assets/percusion/bateria-yamaha.jpg", 
     "description": "Batería Yamaha Sbp0f5cr Stage Custom Birch Caja Cerrada",
     "stock": 3,
     "category": "Percusion"
@@ -77,7 +77,7 @@
     "id": 9, 
     "name": "Conga Parquer", 
     "price": 64.051, 
-    "img": "../assets/percusion/conga.jpg", 
+    "img": "./src/assets/percusion/conga.jpg", 
     "description": "Conga Parquer Liviana Negra Fibra Vidrio Parche Cuero 10",
     "stock": 5,
     "category": "Percusion"

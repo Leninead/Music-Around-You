@@ -15,7 +15,7 @@ const NavBar = () => {
     <>
       <div className="NavBar-container">
         <div className="Navbar-logo">
-          <Link to="/Welcome">
+          <Link to="/">
             <Avatar size="lg" className="avatar" src={logo} />
           </Link>
 
@@ -25,32 +25,27 @@ const NavBar = () => {
         </div>
 
         <Navbar className="NavBar">
-          <Container >
+          <Container>
             <Menu>
               <Link to={"/catalogue"}>
-              <MenuButton as={Button} >Catalogue
-              </MenuButton>
+                <MenuButton as={Button}>Catalogue</MenuButton>
               </Link>
-           
             </Menu>
             <Menu>
-           
               <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
                 Categories
               </MenuButton>
               <MenuList>
-              <Link to={`/category/${"Guitarras"}`}>
-              <MenuItem>Guitarras</MenuItem>
-              </Link>
-               <Link to={`/category/${"Bajos"}`}>
-               <MenuItem>Bajos</MenuItem>
-               </Link>
-               <Link to={`/category/${"Percusion"}`}>
-               <MenuItem>Percusion</MenuItem>
-               </Link>
-         
+                <Link to={`/category/${"Guitarras"}`}>
+                  <MenuItem>Guitarras</MenuItem>
+                </Link>
+                <Link to={`/category/${"Bajos"}`}>
+                  <MenuItem>Bajos</MenuItem>
+                </Link>
+                <Link to={`/category/${"Percusion"}`}>
+                  <MenuItem>Percusion</MenuItem>
+                </Link>
               </MenuList>
-           
             </Menu>
           </Container>
         </Navbar>

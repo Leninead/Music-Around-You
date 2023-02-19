@@ -1,24 +1,55 @@
 import React from "react";
-import { Wrap, WrapItem, Center,Image,Text } from "@chakra-ui/react";
 
-const Item = ({ id, name, stock, category, img }) => {
+import {
+  Card,
+ CardBody,
+
+  Image,
+  Stack,
+  Heading,
+  Text,
+  Divider,
+  CardFooter,
+  ButtonGroup,
+  Button,
+} from "@chakra-ui/react";
+
+
+
+import { Link } from "react-router-dom";
+
+const Item = ({ id, img, name, stock, category }) => {
   return (
     <div key={id}>
-      <Wrap >
-        <WrapItem>
-          <Center >
-            {<Image src={img} /> }
-            <h3>{name}</h3>
-            <Text>
-                Category: {category}
+   
+      <Card  maxW="sm">
+        <CardBody>
+          <Image src={img} alt="" borderRadius="lg" />
+
+          <Stack mt="6" spacing="4">
+            <Heading size="md">{name}</Heading>
+            <Text>Category: {category}</Text>
+            <Text color="blue.600" fontSize="2xl">
+              Stock: {stock}
             </Text>
-            <Text>
-                Stock: {stock}
-            </Text>
-          </Center>
-        </WrapItem>
+          </Stack>
+        </CardBody>
+        <Divider />
+        <CardFooter>
+          <ButtonGroup spacing="2">
      
-      </Wrap>
+            <Button variant="solid" colorScheme="blue">
+              <Link to={`/item/${id}`}>Details</Link>
+            </Button>
+            <Button variant="ghost" colorScheme="blue"></Button>
+           
+          </ButtonGroup>
+        </CardFooter>
+      </Card>
+    
+
+
+     
     </div>
   );
 };

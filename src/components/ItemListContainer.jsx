@@ -13,7 +13,7 @@ const ItemListContainer = () => {
 
   return (
     <div>
-    <h1>Instruments by Category</h1>
+    <h2 className="category-h2">Instruments by Category</h2>
 
      { category ? <ItemList instruments={categoryFilter} /> : <ItemList instruments={Data} /> }
     </div>
