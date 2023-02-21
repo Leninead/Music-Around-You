@@ -1,26 +1,25 @@
 import { useState } from "react";
-import {
+import { Button } from "@chakra-ui/react";
+import { MinusIcon, AddIcon,  } from "@chakra-ui/icons";
 
-    Button,
-  } from "@chakra-ui/react";
-import { MinusIcon, AddIcon } from "@chakra-ui/icons";
-
-const ItemCount = () => {
+const ItemCount = ({ stock }) => {
   const [count, setCount] = useState(0);
 
-
-const suma = () => {
+  const sumar = () => {
     setCount(count + 1);
-}
+  };
 
-const resta = () => {
-    if ( count === 0) {
-        return  useState(0);
-    } else { setCount(count - 1)}
-   
-}
+  const resta = () => {
+    if (count === 0) {
+      return useState(0);
+    } else {
+      setCount(count - 1);
+    }
+  };
 
-
+  const reset = () => {
+    setCount(count * 0); //Hago este reset a ejemplo de lo que vimos en clase para cumplir con la consigna. Entiendo que despues esto se va a enviar al cart
+  };
 
   return (
     <>
@@ -28,12 +27,17 @@ const resta = () => {
         <MinusIcon onClick={resta} />
       </Button>
 
-      <Button variant="solid" colorScheme="blue">
+      <Button onClick={reset} variant="solid" colorScheme="blue">
         Add to cart: {count}
       </Button>
-      <Button variant="solid" colorScheme="gray">
-        <AddIcon onClick={suma} boxSize={4} />
-      </Button>
+
+        <Button variant="solid" colorScheme="gray">
+          <AddIcon onClick={sumar} boxSize={4} />
+        </Button>
+
+      
+       
+      
     </>
   );
 };

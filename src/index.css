@@ -87,6 +87,14 @@ align-items: center;
   font-weight: 700;
   font-size: 20px;
 }
+.container-info { 
+ text-align: center;
+}
+.info-cart {
+  color: rgba(34, 4, 63, 0.726);
+
+
+}
 
 .material-symbols-outlined{
   font-size: 25px;
