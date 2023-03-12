@@ -1,34 +1,25 @@
-import { useParams } from "react-router-dom";
+import React from 'react'
 import ItemDetail from "./ItemDetail";
-import Data from "/data.json";
 import { useState, useEffect } from "react";
+import {  getFirestore, collection, getDocs } from "firebase/firestore";
 
 
 const ItemDetailContainer = () => {
 
-  const [instrument, setInstruments] = useState([]);
-
-
-
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch(Data);
-        const data = await response.json();
-     setInstruments(data)
-      }catch (error) {
-        console.log(error);
-      }
-    }
-    fetchData()
-  }, [])
+    const db = getFirestore();
+    const instrumentsCollection = collection(db, "instruments");
 
+    getDocs(instrumentsCollection).then((snapshot) => {
+      const instruments = snapshot.docs.map((doc) => doc.data() )
+      setData(instruments)
+    });
   
+  }, []);
 
-
-
-  return <ItemDetail instruments={Data} />;
+  return <ItemDetail instruments={data}  />;
 };
 
-export default ItemDetailContainer;
+export default ItemDetailContainer

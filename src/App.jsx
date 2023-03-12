@@ -4,10 +4,12 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import NavBar from "./components/NavBar";
 import Welcome from "./components/Welcome";
 import Cart from "./components/Cart";
+import { ShoppingCartProvider } from "./contexts/ShoppingCartContext";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <ShoppingCartProvider>
+         <BrowserRouter>
       <NavBar />
 
       <Routes>
@@ -29,6 +31,9 @@ const App = () => {
         <Route exact path="/cart" element={<Cart />} />;
       </Routes>
     </BrowserRouter>
+
+    </ShoppingCartProvider>
+ 
   );
 };
 export default App;

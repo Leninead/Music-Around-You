@@ -9,23 +9,41 @@ import {
   Text,
   Divider,
   ButtonGroup,
-  Button,
+ 
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import ItemCount from "./ItemCount";
 
+import { useEffect, useState } from "react";
+import { doc, getDoc, getFirestore} from "firebase/firestore";
 
-const ItemDetail = ({ instruments }) => {
-  const { id } = useParams();
 
-  const instrumentsFilter = instruments.filter(
-    (instrument) => instrument.id == id
-  );
+const ItemDetail = ({ instruments}) => {
+  const { ID } = useParams();
+
+  const [ product, setProduct] = useState([ID]);
+
+  useEffect(() => {
+    const db = getFirestore();
+
+    const instRef = doc(db, "instruments", `${ID}`);
+
+    getDoc(instRef).then((snapshot) => {
+      if (snapshot.exists()) {
+        setProduct(snapshot.data())
+      }else {
+        console.log("doesn't exists");
+      }
+    })
+  }, [])
+
+
+const instrumentsFilter = instruments.filter((instrument) => instrument.id == ID);
 
   return (
     <>
       {instrumentsFilter.map((instrument) => (
-        <div key={instrument.id}>
+        <div key={instrument.ID}>
           <Center>
             <Card maxW="sm">
               <CardBody>
@@ -58,6 +76,6 @@ const ItemDetail = ({ instruments }) => {
       ))}
     </>
   );
-};
 
+      }
 export default ItemDetail;
