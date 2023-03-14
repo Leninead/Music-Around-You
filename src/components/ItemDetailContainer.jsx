@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemDetail from "./ItemDetail";
 import { useState, useEffect } from "react";
-import {  getFirestore, collection, getDocs } from "firebase/firestore";
+import { collection, getFirestore, getDocs } from "firebase/firestore";
 
 
 const ItemDetailContainer = () => {
@@ -10,11 +10,16 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     const db = getFirestore();
+    
     const instrumentsCollection = collection(db, "instruments");
 
     getDocs(instrumentsCollection).then((snapshot) => {
-      const instruments = snapshot.docs.map((doc) => doc.data() )
-      setData(instruments)
+      const instruments = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setData(instruments);
+
     });
   
   }, []);
