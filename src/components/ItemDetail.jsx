@@ -69,7 +69,13 @@ const instrumentsFilter = instruments.filter((instrument) => instrument.id === i
               <Divider />
               <CardFooter className="footer-buttons">
                 <ButtonGroup spacing="2">
-                <ItemCount />
+                <ItemCount
+                stock={product.stock}
+                id={product.id}
+                price={product.price}
+                name={product.name}
+                
+                />
                 </ButtonGroup>
               </CardFooter>
             </Card>

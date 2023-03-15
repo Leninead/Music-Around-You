@@ -10,19 +10,11 @@ import {useState, useContext} from "react";
 import { CartContext } from "../contexts/ShoppingCartContext";
 
 
-
-
-
 const Cart = () => {
 
   const {cart, setCart} = useContext(CartContext );
 
   
-
-
-
-
-
 
   return (
     <div className="container-info">
@@ -53,6 +45,83 @@ const Cart = () => {
 
 export default Cart;
 
+/*
+import React from "react";
+import {
+  FormControl,
+  FormLabel,
+  Textarea,
+  Input,
+  Container,
+  Box,
+  Flex,
+  Spacer,
+  Text,
+  Button,
+} from "@chakra-ui/react";
+import { useState, useContext } from "react";
+import { CartContext } from "../contexts/ShoppingCartContext";
+
+const Cart = () => {
+  const { cart, setCart } = useContext(CartContext);
+
+  const handleRemoveFromCart = (itemId) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== itemId));
+  };
+
+  return (
+    <div className="container-info">
+      {cart.length === 0 ? (
+        <p className="info-cart">No hay productos en el carrito</p>
+      ) : (
+        <Container>
+          {cart.map((item) => (
+            <Box key={item.id} p={4} borderWidth="1px" borderRadius="lg">
+              <Flex>
+                <Box>
+                  <Text fontSize="xl">{item.name}</Text>
+                  <Text color="gray.500" fontSize="lg">
+                    Cantidad: {item.quantity}
+                  </Text>
+                </Box>
+                <Spacer />
+                <Box>
+                  <Text fontSize="xl">$ {item.price * item.quantity}</Text>
+                  <Button
+                    size="sm"
+                    onClick={() => handleRemoveFromCart(item.id)}
+                  >
+                    Remover
+                  </Button>
+                </Box>
+              </Flex>
+            </Box>
+          ))}
+          <FormControl isRequired>
+            <FormLabel>Nombre</FormLabel>
+            <Input placeholder="ejemplo: Lenin" />
+          </FormControl>
+          <FormControl isRequired>
+            <FormLabel>Apellido</FormLabel>
+            <Input placeholder="ejemplo:Acosta" />
+          </FormControl>
+          <FormControl>
+            <FormLabel>Direccion de Email</FormLabel>
+            <Input
+              placeholder="Ejemplo: Lenin@gmail.com"
+              size="md"
+              type="email"
+            />
+          </FormControl>
+          <Textarea placeholder="Deja aqui tus comentarios" />
+        </Container>
+      )}
+    </div>
+  );
+};
+
+export default Cart;
+*/
 
 //**Cart Context
 // Descripcion de la actividad 
