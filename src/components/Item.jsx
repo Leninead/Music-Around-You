@@ -1,6 +1,7 @@
 import React from "react";
 
 import {
+  Center,
   Card,
  CardBody,
 
@@ -21,7 +22,7 @@ import { Link } from "react-router-dom";
 const Item = ({ id, img, name, stock, category }) => {
   return (
     <div key={id}>
-   
+      <Center>
       <Card  maxW="sm">
         <CardBody>
           <Image src={img} alt="" borderRadius="lg" />
@@ -46,6 +47,9 @@ const Item = ({ id, img, name, stock, category }) => {
           </ButtonGroup>
         </CardFooter>
       </Card>
+
+      </Center>
+
     
 
 

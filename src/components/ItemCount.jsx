@@ -54,9 +54,9 @@ const ItemCount = ({ stock, id, price, name }) => {
         <MinusIcon onClick={resta} />
       </Button>
 
-      <Button onClick={()=> agregarAlCarrito} variant="solid" colorScheme="blue">
-        Add to cart: {count}
-      </Button>
+      <Button onClick={agregarAlCarrito} variant="solid" colorScheme="blue">
+       Add to cart: {count}
+       </Button>
 
       <Button variant="solid" colorScheme="gray" onClick={sumar} >
         <AddIcon boxSize={4} />

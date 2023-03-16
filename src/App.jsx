@@ -14,7 +14,7 @@ const App = () => {
 
       <Routes>
         <Route
-          exact
+         exact
           path="/"
           element={
             <Welcome greeting="Te invitamos a vivir una experiencia musical!" />
@@ -23,7 +23,7 @@ const App = () => {
         ;
         <Route exact path="/catalogue" element={<ItemListContainer />} />;
         <Route
-          eaxct
+         exact
           path="/category/:category"
           element={<ItemListContainer />}
         />

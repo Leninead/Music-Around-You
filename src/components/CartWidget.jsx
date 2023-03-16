@@ -7,7 +7,7 @@ import { CartContext } from '../contexts/ShoppingCartContext'
 const CartWidget = () => {
   const {cart, setCart} = useContext(CartContext );
 
-  const quantity = cart.reduce((acc, curr) => { return acc + curr.quantity;}, 0 );
+  const quantity = cart.reduce((acc, curr) => { return acc + curr.quantity}, 0 );
 
   return (
     <div>
