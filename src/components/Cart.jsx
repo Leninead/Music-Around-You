@@ -11,37 +11,31 @@ import {
   Card,
   CardBody,
   CardFooter,
-
   Stack,
   Heading,
   Text,
   Divider,
   Button,
 } from "@chakra-ui/react";
+import { DeleteIcon }  from "@chakra-ui/icons";
 import { useState, useContext } from "react";
 import { CartContext } from "../contexts/ShoppingCartContext";
 
 const Cart = () => {
   const { cart, setCart } = useContext(CartContext);
 
-  const removeFromCart = (item) => {
-    const updatedCart = cart.filter((cartItem) => cartItem.id !== item.id);
+  const removeFromCart = (itemId) => {
+    const updatedCart = cart.filter((cartItem) => cartItem.id !== itemId);
     setCart(updatedCart);
-    console.log(updatedCart);
   };
-  
 
   return (
     <div className="container-info">
-    
       <Center>
         <Heading size="md">Cart</Heading>
-        
       </Center>
       {cart.length === 0 ? (
-        <Text textAlign="center">
-          No hay productos en el carrito
-        </Text>
+        <Text textAlign="center">No hay productos en el carrito</Text>
       ) : (
         cart.map((item) => (
           <Card key={item.id} maxW="sm">
@@ -58,11 +52,21 @@ const Cart = () => {
             </CardBody>
             <Divider />
             <CardFooter className="footer-buttons">
+              <Button
+                colorScheme="red"
               
-              <Button colorScheme="blue" onClick={() => removeFromCart(item.id)} >
-                Borrar del carrito
+              >
+             <DeleteIcon   onClick={() => removeFromCart(item.id)} boxSize={6} />
               </Button>
             </CardFooter>
+
+            <Container>
+              <CardFooter>
+                <Button colorScheme="blue" onClick={() => setCart([])}>
+                  Vaciar carrito
+                </Button>
+              </CardFooter>
+            </Container>
           </Card>
         ))
       )}
@@ -88,7 +92,6 @@ const Cart = () => {
       </Container>
     </div>
   );
-}
+};
 
 export default Cart;
-
