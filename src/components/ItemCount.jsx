@@ -4,7 +4,7 @@ import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import Swal from "sweetalert2";
 import { CartContext } from "../contexts/ShoppingCartContext";
 
-const ItemCount = ({ stock, id, price, name }) => {
+const ItemCount = ({ stock, id, price, name, img }) => {
   const {cart, setCart} = useContext(CartContext);
   const [count, setCount] = useState(0);
 
@@ -40,7 +40,7 @@ const ItemCount = ({ stock, id, price, name }) => {
           }
         });
       } else{
-        return [...cartItems, {id, quantity: count, price, name}]
+        return [...cartItems, {id, quantity: count, price, name, img}]
 
       }
     });

@@ -49,7 +49,7 @@ const instrumentsFilter = instruments.filter((instrument) => instrument.id === i
           <Center>
             <Card maxW="sm">
               <CardBody>
-                <Image src={product.img} alt="" borderRadius="lg" />
+                <Image className="img-item" src={product.img} alt="" borderRadius="lg" />
                 <Stack mt="6" spacing="3">
                   <Heading size="md">{product.name}</Heading>
                   <Text color="black.600" fontSize="2xl">
@@ -70,6 +70,7 @@ const instrumentsFilter = instruments.filter((instrument) => instrument.id === i
               <CardFooter className="footer-buttons">
                 <ButtonGroup spacing="2">
                 <ItemCount
+                imagen={product.img}
                 stock={product.stock}
                 id={product.id}
                 price={product.price}

@@ -16,6 +16,8 @@ import {
   Text,
   Divider,
   Button,
+  Image
+
 } from "@chakra-ui/react";
 import { DeleteIcon } from "@chakra-ui/icons";
 import { useEffect, useState, useContext } from "react";
@@ -52,6 +54,11 @@ const Cart = () => {
     setCart(updatedCart);
   };
 
+  const clearCart = () => {
+    setCart([]);
+    setCartCleared(true);
+  };
+
 
   return (
     <div className="container-info">
@@ -61,19 +68,21 @@ const Cart = () => {
       {cart.length === 0 ? (
         <Text textAlign="center">No hay productos en el carrito</Text>
       ) : (
-        cart.map((item) => (
-          <Card key={item.id} maxW="sm">
+        cart.map((product) => (
+       
+          <Card key={product.id} maxW="sm">
             <CardBody>
               <Stack mt="6" spacing="3">
-                <Heading size="md">{item.name}</Heading>
+              <Image className="img-item" src={product.img} alt="" borderRadius="lg" />
+                <Heading size="md">{product.name}</Heading>
                 <Text color="black.600" fontSize="2xl">
-                  Quantity: {item.quantity}
+                  Quantity: {product.quantity}
                 </Text>
                 <Text color="black.600" fontSize="2xl">
-                  Price: U$D {item.price}
+                  Price: U$D {product.price}
                 </Text>
                 <Text color="black.600" fontSize="2xl">
-                  Subtotal: U$D {item.subtotal}
+                  Subtotal: U$D {product.subtotal}
                 </Text>
               </Stack>
             </CardBody>
@@ -81,24 +90,37 @@ const Cart = () => {
             <CardFooter className="footer-buttons">
               <Button colorScheme="red">
                 <DeleteIcon
-                  onClick={() => removeFromCart(item.id)}
+                  onClick={() => removeFromCart(product.id)}
                   boxSize={6}
                 />
               </Button>
             </CardFooter>
-          
+               
           </Card>
+          
         ))
       )}
 
-      <Container>
-        <Text color="black.600" fontSize="2xl">
-          Total: U$D {total}
-        </Text>
-        <Button colorScheme="blue" onClick={() => setCart([])}>
-          Vaciar carrito
-        </Button>
-      </Container>
+
+{cart.length > 0 && (
+  <>
+    <Container>
+      <Text color="black.600" fontSize="2xl">
+        Total: U$D {total}
+      </Text>
+      <Button colorScheme="red" onClick={() => clearCart()}>
+        Vaciar carrito
+      </Button>
+       
+   
+      <Button colorScheme="blue" >
+        Comprar
+      </Button>
+    </Container>
+  </>
+)}
+
+
 
       <Container>
         <FormControl isRequired>
