@@ -70,7 +70,7 @@ const instrumentsFilter = instruments.filter((instrument) => instrument.id === i
               <CardFooter className="footer-buttons">
                 <ButtonGroup spacing="2">
                 <ItemCount
-                imagen={product.img}
+                img={product.img}
                 stock={product.stock}
                 id={product.id}
                 price={product.price}

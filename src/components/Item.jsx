@@ -12,7 +12,7 @@ import {
   CardFooter,
   Button,
 } from "@chakra-ui/react";
-import { Flex } from "@chakra-ui/react";
+
 import { Link } from "react-router-dom";
 
 const Item = ({ id, img, name, stock, category }) => {
