@@ -8,6 +8,11 @@ const CartWidget = () => {
   const quantity = cart.reduce((acc, curr) => {
     return acc + curr.quantity;
   }, 0);
+  
+  if (quantity === 0) {
+    return null;
+  }
+
 
   return (
     <>

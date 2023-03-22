@@ -38,7 +38,7 @@ const SendOrder = () => {
   return (
     <div>
       <Center>
-        <Heading>Sending orders</Heading>
+        <Text className="formulario-id">Completa el formulario para recibir el Id track antes de comprar.</Text>
       </Center>
 
       <Container>
@@ -69,17 +69,19 @@ const SendOrder = () => {
           </form>
         </FormControl>
       </Container>
-      {formData && <Cart formData={formData} orderId={orderId} />}
-      <Center>
-        <Text as="b" m={3} fontSize="xl">
-          Order ID:{" "}
-        </Text>
-        <Text as="mark" fontSize="2xl">
-          {orderId}
-        </Text>
-      </Center>
+      {orderId && (
+        <Center>
+          <Text as="b" m={3} fontSize="xl">
+            Order ID:{" "}
+          </Text>
+          <Text as="mark" fontSize="2xl">
+            {orderId}
+          </Text>
+        </Center>
+      )}
     </div>
   );
 };
+
 
 export default SendOrder;

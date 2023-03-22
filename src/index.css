@@ -140,3 +140,14 @@ justify-content: baseline;
   font-size: 20px;
 }
 
+/* Componente SendOrden */
+
+.formulario-id{
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  color: rgba(34, 4, 63, 0.726);
+  font-weight: 900;
+  font-size: 15px;
+  margin: 15px;
+  
+}

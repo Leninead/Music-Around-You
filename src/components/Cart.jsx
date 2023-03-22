@@ -22,13 +22,18 @@ import { DeleteIcon } from "@chakra-ui/icons";
 import { useEffect, useState, useContext } from "react";
 import { CartContext } from "../contexts/ShoppingCartContext";
 import SendOrder from "./SendOrder";
+import Swal from 'sweetalert2'
+import 'sweetalert2/dist/sweetalert2.min.css'
+
+
+
 
 
 const Cart = () => {
   const { cart, setCart } = useContext(CartContext);
   const [subtotal, setSubtotal] = useState(0);
   const [total, setTotal] = useState(0);
-
+  const [cartCleared, setCartCleared] = useState(false);
 
 
   const calculateTotal = () => {
@@ -60,9 +65,31 @@ const Cart = () => {
     setCartCleared(true);
   };
   const handleCompraClick = () => {
-    clearCart();
+    
+    Swal.fire({
+      title: '¿Está seguro que desea comprar?',
+      text: `El total de su compra es U$D ${total}`,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, comprar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+      Swal.fire(
+          '¡Compra realizada!',
+          `Usted ha comprado productos por U$D ${total}.`,
+          'success'
+        )
+      }
+    }).then(() => {
+      clearCart();
+      
+     
+    })
   };
-  
+
   return (
     <div className="container-info">
       <Center>

@@ -9,6 +9,9 @@ import {
   Text,
   Divider,
   ButtonGroup,
+  Spinner,
+  Flex,
+  
 
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
@@ -24,7 +27,7 @@ const ItemDetail = ({ instruments}) => {
   console.log(id);
 
   const [ product, setProduct] = useState([id]);
-
+  const [ isLoading, setIsLoading ] = useState(true);
   useEffect(() => {
     const db = getFirestore();
 
@@ -36,11 +39,21 @@ const ItemDetail = ({ instruments}) => {
       }else {
         console.log("doesn't exists");
       }
+      setIsLoading(false); // <-- set isLoading to false when the data is fetched
     })
   }, [])
-
+  
 
 const instrumentsFilter = instruments.filter((instrument) => instrument.id === id);
+
+if (isLoading) { // <-- display spinner while isLoading is true
+  return (
+    <Flex align="center" justify="center" height="100vh">
+      <Spinner size="xl" color="blue.500" />
+      <Text ml="2">Cargando...</Text>
+    </Flex>
+  )
+}
 
   return (
     <>
