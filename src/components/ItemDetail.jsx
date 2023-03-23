@@ -61,9 +61,11 @@ if (isLoading) { // <-- display spinner while isLoading is true
         <div key={product.id}>
           <Center>
             <Card maxW="sm">
-              <CardBody>
+              <CardBody className="card-detail">
+                <div className="img-detail">
                 <Image className="img-item" src={product.img} alt="" borderRadius="lg" />
-                <Stack mt="6" spacing="3">
+                </div>
+                <Stack  mt="6" spacing="3">
                   <Heading size="md">{product.name}</Heading>
                   <Text color="black.600" fontSize="2xl">
                     Description: {product.description}

@@ -2,7 +2,7 @@
 ## Music Around You
 ### Te invitamos a vivir una experiencia musical!
 
-_Music Around You Es una tienda de Musica donde no solo podras conseguir toda nuestra gamas de instrumentos, sino tambien variedad de cursos, talleres y noticias que te mantendran actualizado en toda la escena musical tanto nacional como internacional._
+_Music Around You Es una tienda de Musica donde no solo podras conseguir toda nuestra gamas de instrumentos, sino que proximamente te estaremos brindando variedades de cursos, talleres y noticias que te mantendran actualizado en toda la escena musical tanto nacional como internacional._
 
 #### Acontinuación explicare algunos aspectos tecnicos usados para esta entrega.
 
@@ -121,6 +121,9 @@ import ItemCount from "./ItemCount";
 ### A continuación dejo un Gif que muestra la navegabilidad en la apliación. Usando las rutas que se definieron en el componente APP:
 
 ![Video Rutas](./src/assets/Readme/Music-Around-You-Google-Chrome-2023-02-21-16-44-56.gif)
+
+[Mi perfil de Linkedln](https://www.linkedin.com/in/lenin-acosta-b32b8a262/)
+
 
 
 

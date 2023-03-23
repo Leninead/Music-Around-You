@@ -120,7 +120,17 @@ align-items: center;
 }
 
 /* Componente Cart */
-
+.img-cart{
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cart-container{
+  margin: 15px;
+}
 
 /* Details button */
 .container-details{
@@ -135,6 +145,14 @@ align-items: center;
   text-align: center;
 }
 
+.img-detail{
+
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .container-info { 
  text-align: center;
