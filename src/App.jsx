@@ -17,7 +17,7 @@ const App = () => {
          exact
           path="/"
           element={
-            <Welcome greeting="Te invitamos a vivir una experiencia musical!" />
+            <Welcome greeting="You are totally welcome to live this musical experience!" />
           }
         />
         ;

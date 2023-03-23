@@ -1,6 +1,6 @@
 import Item from "./Item";
-import { Container } from "@chakra-ui/react";
-import { Spinner,Flex,Text } from "@chakra-ui/react";
+import { Spinner, Flex, Text, Wrap, Center } from "@chakra-ui/react";
+
 const ItemList = ({ instruments }) => {
   if (instruments.length === 0) {
     return (
@@ -8,15 +8,15 @@ const ItemList = ({ instruments }) => {
         <Spinner size="xl" color="blue.500" />
         <Text ml="2">Cargando...</Text>
       </Flex>
-    )
+    );
   }
+
   return (
-    <>
-      <Container maxW="container.sm" className="main-catalogue">
-    
-        {instruments?.map((instrument) => (
+    <Wrap justify="center">
+      {instruments?.map((instrument) => (
+        <Center key={instrument.id}>
           <Item
-            key={instrument.id}
+          
             id={instrument.id}
             img={instrument.img}
             name={instrument.name}
@@ -25,9 +25,9 @@ const ItemList = ({ instruments }) => {
             stock={instrument.stock}
             category={instrument.category}
           />
-        ))}
-      </Container>
-    </>
+        </Center>
+      ))}
+    </Wrap>
   );
 };
 

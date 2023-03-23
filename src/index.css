@@ -83,24 +83,32 @@ align-items: center;
 }
 
 /* ItemList */
-.item-container {
-  display: flex;
-  flex-wrap: wrap ;
-  justify-content: center;
-}
+
+
 
 .card-container {
   width: 300px;
+  text-align: center;
   margin: 1rem;
-}
+ height: 500px;
 
-rd-footer{
+}
+.cards{
+  width: 100%;
+  height: 400px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.Item-image{
+
+
+.img-item{
   height: 300px;
+  height: 250px;
+  align-items: center;
+
+ 
 }
 
 /* Componente ItemDetailContainer */
@@ -114,6 +122,18 @@ rd-footer{
 /* Componente Cart */
 
 
+/* Details button */
+.container-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.details{
+  margin: 0.5rem;
+  text-align: center;
+}
 
 
 .container-info { 

@@ -10,17 +10,21 @@ const CartWidget = () => {
   }, 0);
   
   if (quantity === 0) {
-    return null;
+    return (
+      <div className="CartWidget-Container" >
+        <span className="material-symbols-outlined">shopping_cart</span>
+      </div>
+    );
   }
-
 
   return (
     <>
       <div className="CartWidget-Container" >
         <span className="material-symbols-outlined">shopping_cart</span>
 
-        <span className="cart-numerito">{quantity}</span>
+      
       </div>
+      <span className="cart-numerito">{quantity}</span>
     </>
   );
 };
