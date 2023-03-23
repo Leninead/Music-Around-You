@@ -6,8 +6,36 @@ _Music Around You Es una tienda de Musica donde no solo podras conseguir toda nu
 
 #### Acontinuación explicare algunos aspectos tecnicos usados para esta entrega.
 
-Tenemos el componente Main que es el padre de todos en este importamos:
+## Instalación
+To install the dependencies, run:
+```
+npm install
+```
+Para ejecutar la App, run:
+```
+npm run dev
+```
+## Dependencias
 
+   * react - main library for building the UI
+   * react-router-dom - for routing within the application
+   * @chakra-ui/react - for styling components
+   * firebase - for handling the shopping cart and submitting orders
+   * sweetalert2 - for displaying alerts and modals
+
+
+## Estructura de archivos
+
+  *   src/App.js - main component for the website
+  * src/components - directory for all the components used in the website
+  *  src/contexts - directory for the   ShoppingCartContext used in the shopping cart functionality
+  *  src/index.css - global CSS styles
+  *  src/index.js - entry point of the application
+  *  src/data - directory for the JSON data used to populate the catalogue of instruments
+
+
+Caracteristicas de algunos componentes y sus importaciones:
+### Main
 ```
 import React from 'react'
 import ReactDOM from 'react-dom/client'
@@ -16,18 +44,17 @@ import './index.css'
 import { ChakraProvider } from '@chakra-ui/react'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    
-    <ChakraProvider>
-    <App />
-    </ChakraProvider>
-
-  </React.StrictMode>,
+<React.StrictMode>
+<ChakraProvider>
+<App />
+</ChakraProvider>
+</React.StrictMode>,
 )
 
 ```
 
-Despues sigue el componente App que representa toda nuestra aplicacion. En este importamos:
+### APP 
+Representa toda nuestra aplicacion. En este importamos:
 
 ```import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemListContainer from "./components/ItemListContainer";
@@ -57,18 +84,17 @@ Y luego el ultimo componente de nuestro padre ItemListContainer, es el Item. El 
 ```
 import React from "react";
 
-import {
-  Card,
+ import {
+ Card,
  CardBody,
-
-  Image,
-  Stack,
-  Heading,
-  Text,
-  Divider,
-  CardFooter,
-  ButtonGroup,
-  Button,
+ Image,
+ Stack,
+ Heading,
+ Text,
+ Divider,
+ CardFooter,
+ ButtonGroup,
+ Button,
 } from "@chakra-ui/react";
 
 
@@ -118,9 +144,10 @@ import ItemCount from "./ItemCount";
 
 ```
 
-### A continuación dejo un Gif que muestra la navegabilidad en la apliación. Usando las rutas que se definieron en el componente APP:
+### A continuación dejo un Gif que muestra la navegabilidad en la apliación.
 
-![Video Rutas](./src/assets/Readme/Music-Around-You-Google-Chrome-2023-02-21-16-44-56.gif)
+
+![Video Rutas](./src/assets/Readme/Music-Around-You-%E2%80%94-Mozilla-Firefox-2023-03-23-20-33-03.gif)
 
 [Mi perfil de Linkedln](https://www.linkedin.com/in/lenin-acosta-b32b8a262/)
 

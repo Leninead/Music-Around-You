@@ -1,6 +1,6 @@
 import {
     Container,
-    Heading,
+   
     Input,
     Button,
     Text,
@@ -9,8 +9,9 @@ import {
     FormLabel,
     Textarea
   } from "@chakra-ui/react";
-import { useState } from "react";
+  import { useContext, useState } from "react";
 import { collection, getFirestore, addDoc } from "firebase/firestore";
+import { CartContext } from "../contexts/ShoppingCartContext";
 
 
 const SendOrder = () => {
@@ -19,7 +20,8 @@ const SendOrder = () => {
   const [lastName, setLastName] = useState("");
   const [textArea, setTextArea] = useState("");
   const [email, setEmail] = useState("");
-  const [formData, setFormData] = useState(null);
+  const {cart} = useContext(CartContext);
+
 
   const db = getFirestore();
 
@@ -33,6 +35,7 @@ const SendOrder = () => {
     lastName,
     email,
     textArea,
+    cart
   };
   const oredersCollection = collection(db, "orden");
   return (
