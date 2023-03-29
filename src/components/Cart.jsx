@@ -31,7 +31,7 @@ const Cart = () => {
   const [subtotal, setSubtotal] = useState(0);
   const [total, setTotal] = useState(0);
   const [cartCleared, setCartCleared] = useState(false);
-
+ 
   const db = getFirestore();
 
   const calculateTotal = () => {
@@ -51,7 +51,7 @@ const Cart = () => {
 
   useEffect(() => {
     calculateTotal();
-  }, [cart]);
+  }, []);
 
   const removeFromCart = (itemId) => {
     const updatedCart = cart.filter((cartItem) => cartItem.id !== itemId);

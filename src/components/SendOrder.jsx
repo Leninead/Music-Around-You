@@ -21,7 +21,7 @@ const SendOrder = () => {
   const [textArea, setTextArea] = useState("");
   const [email, setEmail] = useState("");
   const {cart} = useContext(CartContext);
-
+ 
 
   const db = getFirestore();
 
