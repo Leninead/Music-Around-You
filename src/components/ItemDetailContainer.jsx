@@ -5,7 +5,7 @@ import { collection, getFirestore, getDocs } from "firebase/firestore";
 
 
 const ItemDetailContainer = () => {
-console.log("-->ItemDetailContainer", ItemDetailContainer);
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
