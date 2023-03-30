@@ -6,7 +6,7 @@ import { CartContext } from "../contexts/ShoppingCartContext";
 
 const ItemCount = ({ stock, id, price, name, img }) => {
   const {cart, setCart} = useContext(CartContext);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   const sumar = () => {
     const newCount = count + 1;
@@ -18,8 +18,8 @@ const ItemCount = ({ stock, id, price, name, img }) => {
   };
 
   const resta = () => {
-    if (count === 0) {
-      return useState(0);
+    if (count === 1) {
+      return null;
     } else {
       setCount(count - 1);
     }

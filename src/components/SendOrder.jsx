@@ -12,7 +12,7 @@ import {
   import { useContext, useState } from "react";
 import { collection, getFirestore, addDoc } from "firebase/firestore";
 import { CartContext } from "../contexts/ShoppingCartContext";
-
+import Swal from "sweetalert2";
 
 const SendOrder = () => {
   const [orderId, setOrderId] = useState(null);
@@ -26,8 +26,12 @@ const SendOrder = () => {
   const db = getFirestore();
 
 
-  const handleSubmint = (e) => {
+   const handleSubmint = (e) => {
     e.preventDefault();
+    if (name === "" || lastName === "" || email === "") {
+      Swal.fire("Por favor, rellena los campos vacios");
+      return;
+    }
     addDoc(oredersCollection, order).then(({ id }) => setOrderId(id));
   };
   const order = {

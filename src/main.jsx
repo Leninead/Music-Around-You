@@ -39,19 +39,6 @@ const app = initializeApp(firebaseConfig);
 
 
 
-//NOTA: Estaba tratando de incorporar las imagenes por medio del Storage pero no me salio, recurri a cargarlas copiando directamente su direccion 
-//   const storage = getStorage();
-
-//  const storageRef = ref(storage, 'images/sparky.jpg');
-
-//  uploadBytes(storageRef, file).then((snapshot) => {
-//   console.log("File uploaded successfully!");
-// }).catch((error) => {
-//   console.error("Error uploading file: ", error);
-// });
-
- 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     
